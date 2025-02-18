@@ -1,0 +1,212 @@
+/* CSS Selectors */
+
+/* Element Selector */
+p {
+    color: blue;
+}
+
+/* Class Selector */
+.highlight {
+    background-color: yellow;
+}
+
+/* ID Selector */
+#header {
+    font-size: 24px;
+}
+
+/* Descendant Selector */
+div p {
+    margin: 10px;
+}
+
+/* Child Selector */
+div > p {
+    padding: 5px;
+}
+
+/* Box Model Properties */
+
+.box-model {
+    /* Content - The actual content of the element */
+    width: 200px;
+    height: 100px;
+    
+    /* Padding - Space between content and border */
+    padding: 20px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    
+    /* Border - The border around the padding */
+    border: 2px solid black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    
+    /* Margin - Space outside the border */
+    margin: 10px;
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+/* Display Properties */
+
+.display-examples {
+    /* Block - Takes full width, starts on new line */
+    display: block;
+    
+    /* Inline - Takes only necessary width */
+    display: inline;
+    
+    /* Inline-block - Inline but can set width/height */
+    display: inline-block;
+    
+    /* Flex - Flexible box layout */
+    display: flex;
+    
+    /* Grid - Grid layout */
+    display: grid;
+    
+    /* None - Hides element */
+    display: none;
+}
+
+/* Position Properties */
+
+.positioning {
+    /* Static - Default flow */
+    position: static;
+    
+    /* Relative - Positioned relative to normal position */
+    position: relative;
+    top: 10px;
+    left: 20px;
+    
+    /* Absolute - Positioned relative to nearest positioned ancestor */
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    /* Fixed - Positioned relative to viewport */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+    /* Sticky - Becomes fixed when scrolling */
+    position: sticky;
+    top: 0;
+}
+
+/* Flexbox Properties */
+
+.flex-container {
+    display: flex;
+    /* Main axis alignment */
+    justify-content: space-between;
+    /* Cross axis alignment */
+    align-items: center;
+    /* Wrap items */
+    flex-wrap: wrap;
+    /* Direction of items */
+    flex-direction: row;
+}
+
+.flex-item {
+    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+/* Grid Properties */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    grid-auto-flow: row;
+}
+
+/* Typography */
+
+.text-styling {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+}
+
+/* Colors and Backgrounds */
+
+.colors {
+    /* Color ways */
+    color: red;
+    color: #ff0000;
+    color: rgb(255, 0, 0);
+    color: rgba(255, 0, 0, 0.5);
+    color: hsl(0, 100%, 50%);
+    color: hsla(0, 100%, 50%, 0.5);
+    
+    /* Backgrounds */
+    background-color: #f0f0f0;
+    background-image: url('image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Transitions and Animations */
+
+.transition {
+    transition: all 0.3s ease;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100px); }
+}
+
+.animation {
+    animation: slide 2s infinite;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+    .responsive {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* CSS Variables (Custom Properties) */
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+}
+
+.using-variables {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+/* Transform Properties */
+
+.transform {
+    transform: translate(50px, 100px);
+    transform: rotate(45deg);
+    transform: scale(1.5);
+    transform: skew(10deg);
+}
